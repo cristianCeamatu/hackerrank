@@ -1,12 +1,13 @@
-const mergeHalves = (arr, leftStart, rightEnd) => {
-  const leftEnd = ~~((leftStart + rightEnd) / 2);
+const mergeHalves = (arr, result, leftStart, rightEnd) => {
+  const leftEnd = Math.floor((leftStart + rightEnd) / 2);
   const rightStart = leftEnd + 1
-  console.log(`rightStart`, rightStart)
+  const size = rightEnd - leftStart + 1
+  console.log(`size`, size)
 };
 
 const mergeSort = (arr, result, left, right) => {
   if (right <= left) return
-  const middle = ~~((left + right) / 2);
+  const middle = Math.floor((left + right) / 2);
   mergeSort(arr,result, left, middle)
   mergeSort(arr, result, middle + 1, right)
   mergeHalves(arr, result, left, right)
