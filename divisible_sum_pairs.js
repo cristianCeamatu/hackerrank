@@ -8,7 +8,6 @@ function divisibleSumPairs(n, k, ar) {
       const nextEl = ar[j]
       if (i < j && (cur + nextEl) % k === 0) count++
     }
-    
   }
 
   return count
