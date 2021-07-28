@@ -1,5 +1,5 @@
 function elementeReordonate(vector, m) {
-  return vector.reduce((a, b) => a + b) === 8 ? 'DA' : 'NU'
+  return vector.reduce((a, b) => a + b) === m ? 'DA' : 'NU'
 }
 
 console.log(elementeReordonate([2, 5, 1], 8))
